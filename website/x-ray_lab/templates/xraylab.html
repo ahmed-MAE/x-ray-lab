@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+    <div class="container">
+        <br>
+        <h3 class="content">How it works ?</h3>
+
+        <p class="content">
+            As a user, all you have to do is just click a few buttons and our AI powered
+            website will provide you with the pathology risk predictions,
+            first: click on <span class="font-italic">try it now</span> button on this page.
+            second: click on <span class="font-italic">Browse</span> and select a chest x-ray image from your local machine.
+            third: click <span class="font-italic">upload & predict</span>,
+            and that is it.
+        </p>
+
+
+        <div align="center">
+        <img class="img-fluid" alt="Responsive image" src="{{ url_for('static',filename='images/explain.png') }}" alt="" width="600" height="230">
+        </div>
+
+        <h3 class="content">Disclaimer</h3>
+
+        <p class="content">
+            The information on this site is not intended or implied to be
+            a substitute for professional medical advice, diagnosis or treatment.
+            All content, including text, graphics, images and information,
+            contained on or available through this web site is for general
+            nformation purposes only. You are encouraged to confirm any
+            information obtained from or through this web site with other sources,
+            and review all information regarding any medical condition or
+            treatment with your physician. NEVER DISREGARD PROFESSIONAL
+            MEDICAL ADVICE OR DELAY SEEKING MEDICAL TREATMENT BECAUSE OF SOMETHING
+            YOU HAVE READ ON OR ACCESSED THROUGH THIS WEB SITE.
+        </p>
+        <div align="center">
+            <a class="btn btn-outline-primary" href="{{ url_for('predictions') }}">Try It Now</a>
+        </div>
+        <br><br><br><br>
+
+
+    </div>
+
+
+{% endblock  %}

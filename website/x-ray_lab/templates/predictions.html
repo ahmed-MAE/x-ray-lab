@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+
+    <div class="container">
+      <br>
+
+      <p class="content">
+          Before uploading any images please note that images uploaded to this web site will be
+          saved in our servers to complete the diagnostic process and may
+          be used later to enhance our machine learning model.
+      </p>
+    </div>
+    <br>
+
+    <div class="container form-group">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="upload">Accept and upload</label>
+            <input type="file"  class="form-control-file" id="upload" name="image" required="true">
+            <br>
+            <input type="submit" value="predict">
+        </form>
+    </div>
+
+    {% if fileupload  %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }} "alt="" width="300" height="400">
+            </div>
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="700" height="400">
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
